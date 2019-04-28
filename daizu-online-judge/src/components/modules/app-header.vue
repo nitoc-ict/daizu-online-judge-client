@@ -1,6 +1,6 @@
 <template>
   <div style="position: relative;">
-    <v-toolbar absolute color="grey lighten-5" light>
+    <v-toolbar class="pa-1" absolute color="grey lighten-5" light>
       <v-toolbar-title style="color: #00897B;">daizu Online Judge</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>

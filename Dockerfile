@@ -7,9 +7,12 @@ RUN apk update && \
     git clone https://github.com/nitoc-ict/daizu-online-judge-client /daizu-online-judge-client && \
 		cd /daizu-online-judge-client && \
     git checkout develop && \
-    cd daizu-online-judge && \
-		npm install
+    chmod +x run.sh
+
+WORKDIR /daizu-online-judge-client
 
 EXPOSE 8080
 
-ENTRYPOINT ["sh /daizu-online-judge-client/run.sh"]
+ENTRYPOINT ["sh"]
+
+CMD ["run.sh"]

@@ -14,4 +14,4 @@ WORKDIR /daizu-online-judge-client
 
 EXPOSE 8080
 
-CMD ["/docker-entrypoint.sh"]
+CMD ["/daizu-online-judge-client/docker-entrypoint.sh"]

@@ -13,8 +13,14 @@
         <v-btn flat>
           <router-link to="/contests" style="color: #00897B;text-decoration: none;">Contests</router-link>
         </v-btn>
-        <v-btn flat>Sign in</v-btn>
+        <v-btn flat>
+          <router-link to="/login" style="color: #00897B;text-decoration: none;">Login</router-link>
+        </v-btn>
       </v-toolbar-items>
     </v-toolbar>
   </div>
 </template>
+
+<script>
+export default {};
+</script>

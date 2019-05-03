@@ -1,5 +1,17 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <Header/>
   </div>
 </template>
+
+<script>
+// @ is an alias to /src
+import Header from "../modules/app-header";
+
+export default {
+  name: "contests",
+  components: {
+    Header
+  }
+};
+</script>

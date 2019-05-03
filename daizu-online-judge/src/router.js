@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './components/views/Home.vue'
 import About from './components/views/About.vue'
 import Contests from './components/views/Contests.vue'
+import Login from './components/views/Login.vue'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
       path: '/contests',
       name: 'contests',
       component: Contests
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
     }
   ]
 })

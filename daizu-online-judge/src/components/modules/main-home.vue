@@ -5,9 +5,14 @@
         <div class="font-weight-bold display-3">#ICT Welcome Contest 2019</div>
         <div class="subheading py-2">ICTウェルカムコンテストを開催しています.</div>
         <div class="subheading py-2">皆様奮ってご参加くださいませ.</div>
-        <v-btn dark color="orange darken-4">
-          <router-link to="/contests" style="color:#FAFAFA; text-decoration: none;">参加する</router-link>
-        </v-btn>
+        <v-layout align-center row>
+          <v-btn dark color="orange darken-4">
+            <router-link to="/contests" style="color:#FAFAFA; text-decoration: none;">参加する</router-link>
+          </v-btn>
+          <div class="subheading">
+            <router-link to="/" style="text-decoration: none;">アカウント登録はこちら</router-link>
+          </div>
+        </v-layout>
       </v-flex>
     </v-layout>
   </div>

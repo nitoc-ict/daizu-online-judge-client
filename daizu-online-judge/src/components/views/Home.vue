@@ -1,19 +1,27 @@
 <template>
-  <div class="home">
-    <Header/>
-    <Footer/>
+  <div id="home">
+    <v-app>
+      <Header/>
+      <v-container>
+        <Main/>
+      </v-container>
+      <Footer/>
+    </v-app>
+    <router-view/>
   </div>
 </template>
 
-<script>
+// <script>
 // @ is an alias to /src
 import Header from "../modules/app-header";
 import Footer from "../modules/app-footer";
+import Main from "../modules/main-home";
 
 export default {
   name: "home",
   components: {
     Header,
+    Main,
     Footer
   }
 };

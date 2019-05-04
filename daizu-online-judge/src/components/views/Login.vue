@@ -1,7 +1,10 @@
 
 <template>
-  <div class="login">
-    <Footer/>
+  <div id="login">
+    <v-app>
+      <Footer/>
+    </v-app>
+    <router-view/>
   </div>
 </template>
 
@@ -10,7 +13,7 @@
 import Footer from "../modules/app-footer";
 
 export default {
-  name: "contests",
+  name: "login",
   components: {
     Footer
   }

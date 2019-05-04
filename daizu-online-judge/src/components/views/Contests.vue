@@ -1,7 +1,10 @@
 <template>
-  <div class="contests">
-    <Header/>
-    <Footer/>
+  <div id="contests">
+    <v-app>
+      <Header/>
+      <Footer/>
+    </v-app>
+    <router-view/>
   </div>
 </template>
 

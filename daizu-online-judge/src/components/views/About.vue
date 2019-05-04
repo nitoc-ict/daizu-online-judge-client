@@ -1,6 +1,9 @@
 <template>
-  <div class="about">
-    <Header/>
+  <div id="about">
+    <v-app>
+      <Header/>
+    </v-app>
+    <router-view/>
   </div>
 </template>
 
@@ -9,7 +12,7 @@
 import Header from "../modules/app-header";
 
 export default {
-  name: "contests",
+  name: "about",
   components: {
     Header
   }

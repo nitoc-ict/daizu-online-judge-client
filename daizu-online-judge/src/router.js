@@ -3,7 +3,8 @@ import Router from 'vue-router'
 import Home from './components/views/Home.vue'
 import About from './components/views/About.vue'
 import Contests from './components/views/Contests.vue'
-import Login from './components/views/Login.vue'
+import SignUp from './components/views/SignUp.vue'
+import SignIn from './components/views/SignIn.vue'
 
 Vue.use(Router)
 
@@ -26,9 +27,14 @@ export default new Router({
       component: Contests
     },
     {
-      path: '/login',
-      name: 'login',
-      component: Login
+      path: '/signin',
+      name: 'sign-in',
+      component: SignIn
+    },
+    {
+      path: '/signup',
+      name: 'sign-up',
+      component: SignUp
     }
   ]
 })

@@ -2,7 +2,7 @@
   <div id="home">
     <v-app>
       <Header/>
-      <v-container>
+      <v-container class="container align-start column fill-height">
         <Main/>
       </v-container>
       <Footer/>

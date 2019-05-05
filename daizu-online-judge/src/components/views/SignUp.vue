@@ -1,23 +1,19 @@
 <template>
   <div id="sign-up">
     <v-app>
-      <Header/>
-      <v-container></v-container>
-      <Footer/>
+      <SignUp/>
     </v-app>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Header from "../modules/app-header";
-import Footer from "../modules/app-footer";
+import SignUp from "../modules/form-signup";
 
 export default {
   name: "sign-up",
   components: {
-    Header,
-    Footer
+    SignUp
   }
 };
 </script>

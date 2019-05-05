@@ -26,9 +26,9 @@
               ></v-text-field>
               <v-text-field
                 prepend-icon="lock"
-                name="password"
+                v-model="password"
+                :rules="passwordRules"
                 label="Password"
-                id="password"
                 type="password"
                 required
               ></v-text-field>
@@ -57,6 +57,24 @@ export default {
   name: "form-signup",
   components: {
     DecisionButton
-  }
+  },
+  data: () => ({
+    valid: true,
+    name: "",
+    // 制約
+    nameRules: [
+      v => !!v || "あなたの名前を入力してください"
+      // 名前をアルファベットと数字のみにする
+      // n文字制約
+    ],
+    emailRules: [
+      v => !!v || "メールアドレスを入力してください"
+      // ほんまにメールアドレスかを判断するやつ
+    ],
+    passwordRules: [
+      v => !!v || "パスワードを入力してください"
+      // パスワードをアルファベットと数字のみにする
+    ]
+  })
 };
 </script>

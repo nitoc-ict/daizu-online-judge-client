@@ -6,9 +6,9 @@
         <div class="subheading py-2">ICTウェルカムコンテストを開催しています.</div>
         <div class="subheading py-2">皆様奮ってご参加くださいませ.</div>
         <v-layout align-center row>
-          <v-btn dark color="orange darken-4">
-            <router-link to="/contests" style="color:#FAFAFA; text-decoration: none;">参加する</router-link>
-          </v-btn>
+          <router-link to="/login" style="text-decoration: none;">
+            <EntryButton buttonText="参加する"/>
+          </router-link>
           <div class="subheading">
             <router-link to="/" style="text-decoration: none;">アカウント登録はこちら</router-link>
           </div>
@@ -20,11 +20,11 @@
 
 <script>
 // @ is an alias to /src
-// import EntryButton from "./app-button";
+import EntryButton from "./app-button";
 export default {
   name: "main-home",
   components: {
-    // EntryButton
+    EntryButton
   }
 };
 </script>

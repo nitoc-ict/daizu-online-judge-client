@@ -12,7 +12,7 @@
           <div class="subheading">
             <router-link
               to="/signup"
-              class="linkcolor--text"
+              class="linkcolor--text pl-2"
               style="text-decoration: none;"
             >アカウント登録はこちら</router-link>
           </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="form-signup">
     <v-layout align-center justify-center>
-      <v-flex xs12 sm8 md4>
+      <v-flex xs12 sm8 md5>
         <v-card class="elevation-5">
           <v-toolbar dark class="primary">
             <v-toolbar-title>Sign Up 😎✨</v-toolbar-title>

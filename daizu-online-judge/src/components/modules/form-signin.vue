@@ -2,7 +2,7 @@
 <template>
   <div class="form-signup">
     <v-layout align-center justify-center>
-      <v-flex xs12 sm8 md4>
+      <v-flex xs12 sm8 md5>
         <v-card class="elevation-5">
           <v-toolbar dark class="primary">
             <v-toolbar-title>Sign In 😊💕</v-toolbar-title>
@@ -28,10 +28,16 @@
               ></v-text-field>
               <div class="caption">
                 <router-link
-                  to="/signin"
+                  to="/signup"
                   class="linkcolor--text pl-2"
                   style="text-decoration: none;"
-                >すでにアカウントをお持ちの方はこちら</router-link>
+                >アカウントをお持ちでない方はこちら</router-link>
+                <v-spacer></v-spacer>
+                <router-link
+                  to="/"
+                  class="linkcolor--text pl-2"
+                  style="text-decoration: none;"
+                >パスワード, またはアカウント名を忘れた方はこちら</router-link>
               </div>
             </v-form>
           </v-card-text>

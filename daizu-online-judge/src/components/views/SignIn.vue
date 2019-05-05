@@ -2,7 +2,6 @@
 <template>
   <div id="sign-in">
     <v-app>
-      <!-- <Footer/> -->
       <signinForm/>
     </v-app>
     <router-view/>
@@ -12,7 +11,7 @@
 <script>
 // @ is an alias to /src
 // import Footer from "../modules/app-footer";
-import signinForm from "../modules/form-signin";
+import signinForm from "../modules/main-signin";
 
 export default {
   name: "sign-in",

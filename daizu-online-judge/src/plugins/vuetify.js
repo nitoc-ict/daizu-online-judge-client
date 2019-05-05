@@ -8,7 +8,8 @@ Vue.use(Vuetify, {
   theme: {
     primary: colors.teal.darken1,
     accent: colors.red.darken1,
-    textcolor: colors.grey.darken4
+    textcolor: colors.grey.darken3,
+    linkcolor: colors.blue.lighten2
   }
 
 })

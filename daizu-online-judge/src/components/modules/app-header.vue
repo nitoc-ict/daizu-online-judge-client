@@ -13,7 +13,7 @@
         <router-link to="/contests" style="color: #00897B;text-decoration: none;">Contests</router-link>
       </v-btn>
       <v-btn flat>
-        <router-link to="/login" style="color: #00897B;text-decoration: none;">Login</router-link>
+        <router-link to="/signin" style="color: #00897B;text-decoration: none;">Sign in</router-link>
       </v-btn>
     </v-toolbar-items>
   </v-toolbar>

@@ -22,7 +22,11 @@
         <td class="text-xs-left">{{ props.item.date }}</td>
         <td class="text-xs-left">{{ props.item.time }}</td>
         <td class="text-xs-left">
-          <router-link to="/" class="linkcolor--text" style="text-decoration: none;">参加する</router-link>
+          <router-link
+            to="/contests/contest"
+            class="linkcolor--text"
+            style="text-decoration: none;"
+          >参加する</router-link>
         </td>
         <v-spacer/>
       </template>

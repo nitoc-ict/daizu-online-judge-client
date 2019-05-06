@@ -1,11 +1,8 @@
 import Vue from 'vue'
 import './plugins/vuetify'
 import App from './App.vue'
-<<<<<<< 2459dc561897770e25476319da3cada4ffeaeeb1
 import VueMathjax from 'vue-mathjax'
-=======
 import axios from 'axios'
->>>>>>> feat:axiossをインストールしてインポートした
 
 // bootstrap
 import BootstrapVue from 'bootstrap-vue'
@@ -21,8 +18,6 @@ import router from './router'
 
 Vue.config.productionTip = false
 
-<<<<<<< 2459dc561897770e25476319da3cada4ffeaeeb1
-=======
 Vue.prototype.$axios = axios;
 
 // Vue.use(Vuetify, {
@@ -32,7 +27,6 @@ Vue.prototype.$axios = axios;
 //     textcolor: colors.grey.darken4
 //   }
 // })
->>>>>>> feat:axiossをインストールしてインポートした
 new Vue({
   router,
   render: h => h(App)

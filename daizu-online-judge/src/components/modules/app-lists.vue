@@ -26,12 +26,9 @@
         </td>
         <v-spacer/>
       </template>
+      <!-- もし検索できなかった場合に表示するエラー -->
       <template v-slot:no-results>
-        <v-alert
-          :value="true"
-          color="error"
-          icon="warning"
-        >Your search for "{{ search }}" found no results.</v-alert>
+        <v-alert :value="true" color="error" icon="warning">"{{ search }}" を見つけることができませんでした.</v-alert>
       </template>
       <template v-slot:pageText="props">{{ props.pageStop }} / {{ props.itemsLength }}件表示</template>
     </v-data-table>

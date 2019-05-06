@@ -11,7 +11,7 @@
   </div>
 </template>
 
-// <script>
+<script>
 // @ is an alias to /src
 import Header from "../modules/app-header";
 import Footer from "../modules/app-footer";

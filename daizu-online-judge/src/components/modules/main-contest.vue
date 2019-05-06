@@ -23,7 +23,7 @@
       <!-- 提出 -->
       <v-tab-item>
         <v-card flat>
-          <taskList/>
+          <div class="body-1">提出窓</div>
         </v-card>
       </v-tab-item>
       <!-- 提出状況 -->

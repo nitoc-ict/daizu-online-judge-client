@@ -8,6 +8,7 @@
         <div class="subheading py-2 textcolor--text">皆様奮ってご参加くださいませ.</div>
         -->
         <div class="font-weight-bold display-3 teal--text text--darken-1">Welcome to "daizu Online Judge"</div>
+        <div class="subheading py-2 textcolor--text">まだ見ぬ世界を, "daizu Online Judge"で.</div>
         
         <v-layout align-center row>
           <router-link to="/signin" style="text-decoration: none;">
@@ -22,8 +23,19 @@
           </div>
         </v-layout>
         <v-layout>
-          <div class="textcolor--text">testest</div>
         </v-layout>
+      </v-flex>
+    </v-layout>
+
+    <v-layout>
+      <v-flex xs12>
+        <!--<v-card>
+          <v-card-title primary-title>
+            <h3 class="headline mb-0">ICT Welcome Contest</h3>
+            <div>{{card_text}}</
+        </v-card>
+        -->
+        <Card/>
       </v-flex>
     </v-layout>
   </div>
@@ -32,10 +44,12 @@
 <script>
 // @ is an alias to /src
 import EntryButton from "./app-button";
+import Card from "./app-card";
 export default {
   name: "main-home",
   components: {
-    EntryButton
+    EntryButton,
+    Card
   }
 };
 </script>

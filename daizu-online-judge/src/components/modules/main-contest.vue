@@ -10,7 +10,7 @@
       <v-tab-item>
         <v-card flat color="grey lighten-5">
           <div class="display-1 primary--text mt-5 mb-2">This is "{{ contestTitle }}"</div>
-          <div class="subheading grey--text text-- darken-1 mb-5">{{ contestDate }}</div>
+          <div class="subheading grey--text text--darken-1 mb-5">{{ contestDate }}</div>
           <div class="body-1 textcolor--text">{{ contestExplain }}</div>
         </v-card>
       </v-tab-item>

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import './plugins/vuetify'
 import App from './App.vue'
 import VueMathjax from 'vue-mathjax'
+import axios from 'axios'
 
 // bootstrap
 import BootstrapVue from 'bootstrap-vue'
@@ -17,6 +18,15 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+Vue.prototype.$axios = axios
+
+// Vue.use(Vuetify, {
+//   theme: {
+//     primary: colors.teal.darken1,
+//     accent: colors.red.darken1,
+//     textcolor: colors.grey.darken4
+//   }
+// })
 new Vue({
   router,
   render: h => h(App)

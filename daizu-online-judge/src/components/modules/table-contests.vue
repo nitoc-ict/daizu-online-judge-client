@@ -35,9 +35,9 @@ export default {
           sortable: false,
           value: "name"
         },
-        { text: "開催日", value: "data" },
-        { text: "時間", value: "time" },
-        { text: "", value: "entry", sortable: false }
+        { text: "開催日", sortable: false, value: "data" },
+        { text: "時間", sortable: false, value: "time" },
+        { text: "", sortable: false, value: "entry" }
       ],
       contestList: [
         {

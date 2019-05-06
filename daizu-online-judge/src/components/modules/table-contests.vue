@@ -14,6 +14,10 @@
         <td>{{ props.item.name }}</td>
         <td class="text-xs-left">{{ props.item.date }}</td>
         <td class="text-xs-left">{{ props.item.time }}</td>
+        <td class="text-xs-left">
+          <router-link to="/" class="linkcolor--text" style="text-decoration: none;">参加する</router-link>
+        </td>
+        <v-spacer/>
       </template>
       <template v-slot:pageText="props">{{ props.pageStop }} / {{ props.itemsLength }}件表示</template>
     </v-data-table>
@@ -32,7 +36,8 @@ export default {
           value: "name"
         },
         { text: "開催日", value: "data" },
-        { text: "時間", value: "time" }
+        { text: "時間", value: "time" },
+        { text: "", value: "entry", sortable: false }
       ],
       contestList: [
         {

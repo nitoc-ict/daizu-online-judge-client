@@ -1,5 +1,6 @@
 <template>
-  <div class="table-contests">
+  <div id="table-contests">
+    <Searchbox/>
     <!-- table部 -->
     <v-data-table
       :headers="headers"
@@ -25,9 +26,15 @@
 </template>
 
 <script>
+import Searchbox from "./app-search.vue";
 export default {
+  name: "table-contests",
+  components: {
+    Searchbox
+  },
   data() {
     return {
+      search: "",
       headers: [
         {
           text: "コンテスト名",

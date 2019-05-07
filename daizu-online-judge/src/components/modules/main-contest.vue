@@ -18,7 +18,7 @@
       <v-tab-item>
         <v-card flat>
           <taskList/>
-          <router-link to="/contests/contest/task">test task page</router-link>
+          <router-link to="/contests/welcomecontest/problem">test problem page</router-link>
         </v-card>
       </v-tab-item>
       <!-- 提出 -->

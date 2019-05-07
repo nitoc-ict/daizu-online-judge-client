@@ -6,7 +6,7 @@ import Contests from './components/views/Contests.vue'
 import Contest from './components/views/Contest.vue'
 import SignUp from './components/views/SignUp.vue'
 import SignIn from './components/views/SignIn.vue'
-import Task from './components/views/Task.vue';
+import Problem from './components/views/Problem.vue';
 
 Vue.use(Router)
 
@@ -39,15 +39,15 @@ export default new Router({
       component: SignUp
     },
     {
-      path: '/contests/contest',
+      path: '/contests/welcomecontest',
       name: 'contest',
       component: Contest
     },
     // 問題文表示テストのためのページ 
     {
-      path: '/contests/contest/task',
-      name: 'task',
-      component: Task
+      path: '/contests/welcomecontest/problem',
+      name: 'problem',
+      component: Problem
     }
   ]
 })

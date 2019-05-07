@@ -7,6 +7,7 @@ import Contest from './components/views/Contest.vue'
 import SignUp from './components/views/SignUp.vue'
 import SignIn from './components/views/SignIn.vue'
 import Problem from './components/views/Problem.vue';
+import Submit from './components/views/Submit.vue'
 
 Vue.use(Router)
 
@@ -48,6 +49,12 @@ export default new Router({
       path: '/contests/welcomecontest/problem',
       name: 'problem',
       component: Problem
+    },
+    // 提出ページテスト用
+    {
+      path: '/contests/welcomecontest/problem/submit',
+      name: 'submit',
+      component: Submit
     }
   ]
 })

@@ -1,19 +1,11 @@
 <template>
   <div id="app-problemText">
-    <v-layout justify-start column fill-height>
-      <span class="body-1 textcolor--text" v-html="htmlFormat"></span>
-      <submitButton buttonText="解答を提出する"/>
-    </v-layout>
+    <span class="body-1 textcolor--text" v-html="htmlFormat"></span>
   </div>
 </template>
 
 <script>
-import submitButton from "./app-button.vue";
 export default {
-  name: "main-about",
-  components: {
-    submitButton
-  },
   data() {
     return {
       htmlFormat:

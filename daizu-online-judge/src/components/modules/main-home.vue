@@ -39,12 +39,12 @@
 <script>
 // @ is an alias to /src
 import EntryButton from "./app-button";
-import Card from "./app-card";
+//import Card from "./app-card";
 export default {
   name: "main-home",
   components: {
     EntryButton,
-    Card
+    //Card
   }
 };
 </script>

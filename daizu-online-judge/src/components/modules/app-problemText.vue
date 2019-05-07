@@ -24,12 +24,17 @@ export default {
 </script>
 
 <style>
-/* 見出し */
+/* 見出し
+ * 「問題文」「入力」「入力例」「出力例」などに使う
+ */
 h1 {
   font-size: 1rem;
   font-weight: bold;
 }
-/* 入・出力例, 入力のグレーの背景 */
+/* 入・出力例, 入力のグレーの背景
+ * 入力: <blockquote>を使う
+ * 入力例, 出力例: <pre>を使う 
+ */
 pre,
 blockquote {
   background: #eeeeee;

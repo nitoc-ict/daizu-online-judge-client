@@ -18,7 +18,8 @@ import router from './router'
 
 Vue.config.productionTip = false
 
-Vue.prototype.$axios = axios
+Vue.prototype.$axios = axios;
+
 
 // Vue.use(Vuetify, {
 //   theme: {

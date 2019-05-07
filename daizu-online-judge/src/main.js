@@ -20,6 +20,7 @@ Vue.config.productionTip = false
 
 Vue.prototype.$axios = axios;
 
+
 // Vue.use(Vuetify, {
 //   theme: {
 //     primary: colors.teal.darken1,

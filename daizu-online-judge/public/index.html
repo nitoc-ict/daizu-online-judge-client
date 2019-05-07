@@ -19,6 +19,21 @@
   <div id="app"></div>
   <!-- built files will be auto injected -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_HTML"></script>
+  <!-- mathJaxの導入, 設定 -->
+  <script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"], ['<var>', '</var>'] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            "HTML-CSS": {
+                preferredFont: "TeX",
+                availableFonts: ["TeX"]
+            }
+        });
+      </script>
 </body>
 
 </html>

@@ -1,25 +1,26 @@
 <template>
   <div id="app-problemText">
-    <textarea v-model="formula" cols="30" rows="10"></textarea>
-    <vue-mathjax :formula="formula"></vue-mathjax>
+    <v-layout justify-start row fill-height>
+      <span v-html="htmlFormat"></span>
+    </v-layout>
   </div>
 </template>
 
 <script>
-import { VueMathjax } from "vue-mathjax";
 export default {
   name: "main-about",
-  components: {
-    "vue-mathjax": VueMathjax
-  },
-  mounted() {
-    VueMathjax.Hub.Queue(["Typeset", VueMathjax.Hub]);
-  },
   data() {
     return {
-      formula: "$$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.$$"
+      htmlFormat:
+        "<p>今日は待ちに待った高専祭の日です。<br>高専祭では、 あらかじめ1枚$M$円の金券を購入し、 それを使って屋台などの出し物を利用することができます。<br></p><p>朝ごはんを逃してお腹が空いたらずひるどくんは屋台にやってきました。<br>屋台には3個の商品があり、 それぞれ$a$円、$b$円、$c$円です。</p><p>お腹が空いたらずひるどくんは、 全ての商品を1つずつ買おうと思っています。<br>しかし、 商品の値段はバラバラなので、 $M$円の金券ではちょうど払うことができない可能性があります。<br>計算が苦手ならずひるどくんのために、 3個の商品を$M$円の金券でちょうど払えるかどうか確かめてあげてください。</p>",
+      formula: ""
+      // "あなたは$N$円持っています。あなたはお菓子が大好きなのでお店で買えるだけお菓子を買うことにしました。お菓子の金額$K$が与えられるので、最大何個のお菓子を買うことができるか出力してください。なお、お菓子は無限個あり、売り切れることは無いものとします。"
     };
   }
 };
 </script>
+
+<style>
+</style>
+
 

@@ -1,6 +1,8 @@
 <template>
   <v-toolbar class="pa-1" light>
-    <v-toolbar-title class="primary--text">daizu Online Judge</v-toolbar-title>
+    <v-toolbar-title class="primary--text">
+      <router-link to="/" id="logo-daizu" style="text-decoration: none;">daizu Online Judge</router-link>
+    </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items class="primary--text">
       <v-btn flat>
@@ -22,3 +24,11 @@
 <script>
 export default {};
 </script>
+
+<style>
+#logo-daizu:hover {
+  color: #00897b;
+}
+</style>
+
+

@@ -25,12 +25,14 @@
       </v-flex>
     </v-layout>
 
+<!--
     <v-layout>
       <v-flex xs12 md6>
         <div class="font-weight-bold display-1 text-lg-center teal--text text--darken-1">開催中のコンテスト</div>
         <Card/>
       </v-flex>
     </v-layout>
+-->
   </div>
 </template>
 

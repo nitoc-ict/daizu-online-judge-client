@@ -2,7 +2,11 @@
   <div id="contests">
     <v-app>
       <Header/>
-      <Main/>
+      <v-content>
+        <v-container>
+          <Main/>
+        </v-container>
+      </v-content>
       <Footer/>
     </v-app>
     <router-view/>

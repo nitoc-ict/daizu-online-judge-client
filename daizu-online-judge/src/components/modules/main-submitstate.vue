@@ -8,7 +8,7 @@
     >提出 #{{ sourceID }}</div>
     <v-divider/>
     <!-- ソースコード -->
-    <div class="body-2 font-weight-bold textcolor--text mb-1">ソースコード</div>
+    <div class="body-2 font-weight-bold textcolor--text mb-1 mt-5">ソースコード</div>
     <v-card
       color="grey lighten-3"
       class="textcolor--text elevation-1"
@@ -19,12 +19,30 @@
     <!-- 提出情報 タイトル -->
     <div class="body-2 font-weight-bold textcolor--text mb-1 mt-5">提出情報</div>
     <!-- テーブル部 -->
-    <v-data-table :items="states" class="elevation-1" hide-headers hide-actions>
+    <v-data-table :items="states" :headers="headers" class="elevation-1" hide-actions>
       <template v-slot:items="props">
-        <td>{{ props.item.state }}</td>
         <td class="text-xs-left">{{ props.item.data }}</td>
       </template>
     </v-data-table>
+    <!-- ワーニング -->
+    <div class="body-2 font-weight-bold textcolor--text mb-1 mt-5">Warning</div>
+    <v-card
+      color="grey lighten-3"
+      class="textcolor--text elevation-1"
+      style="font-family: Consolas, 'Courier New', Courier, Monaco, monospace;"
+    >
+      <div class="body-1">{{ warningMsg }}</div>
+    </v-card>
+
+    <!-- コンパイルエラー -->
+    <div class="body-2 font-weight-bold textcolor--text mb-1 mt-5">Compile Error</div>
+    <v-card
+      color="grey lighten-3"
+      class="textcolor--text elevation-1"
+      style="font-family: Consolas, 'Courier New', Courier, Monaco, monospace;"
+    >
+      <div class="body-1">{{ compileErrorMsg }}</div>
+    </v-card>
   </div>
 </template>
 
@@ -36,13 +54,58 @@ export default {
     return {
       sourceID: "001122",
       sourceCode: "#include<stdio.h>",
+      warningMsg: "hoge hoge",
+      compileErrorMsg: "huga huga",
+      headers: [
+        {
+          text: "提出日時",
+          align: "left",
+          sortable: false
+        },
+        {
+          text: "問題",
+          sortable: false
+        },
+        {
+          text: "ユーザ",
+          sortable: false
+        },
+        {
+          text: "言語",
+          sortable: false
+        },
+        {
+          text: "得点",
+          sortable: false
+        },
+        {
+          text: "コード長",
+          sortable: false
+        },
+        {
+          text: "結果",
+          sortable: false
+        },
+        {
+          text: "実行結果",
+          sortable: false
+        },
+        {
+          text: "メモリ",
+          sortable: false
+        },
+        {
+          text: "得点",
+          sortable: false
+        }
+      ],
       states: [
         {
-          state: "提出日時",
+          // state: "提出日時",
           data: "2019-01-10 16:00:00"
         },
         {
-          state: "提出日時",
+          // state: "提出日時",
           data: "2019-01-10 16:00:00"
         }
       ]

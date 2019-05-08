@@ -2,7 +2,7 @@
   <div id="contests">
     <v-app>
       <Header/>
-      <v-content wrap>
+      <v-content>
         <v-container>
           <Main/>
         </v-container>

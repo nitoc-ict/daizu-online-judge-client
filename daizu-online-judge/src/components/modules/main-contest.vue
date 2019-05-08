@@ -1,7 +1,7 @@
 <template>
   <div id="main-contest">
     <!-- コンテストのタイトル -->
-    <div class="display-2 font-weight-medium primary--text mt-2 mb-4">{{ contestTitle }}</div>
+    <!-- <div class="display-2 font-weight-medium primary--text mt-2 mb-4">{{ contestTitle }}</div> -->
     <!-- タブ -->
     <v-tabs v-model="tab" color="grey lighten-5">
       <v-tabs-slider color="accent"></v-tabs-slider>

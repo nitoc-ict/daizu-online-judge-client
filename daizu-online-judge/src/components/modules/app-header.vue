@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar class="pa-1" light>
+  <v-toolbar class="pa-1" light fixed>
     <v-toolbar-title class="primary--text">
       <router-link to="/" id="logo-daizu" style="text-decoration: none;">daizu Online Judge</router-link>
     </v-toolbar-title>

@@ -31,6 +31,7 @@
       <v-tab-item>
         <v-card flat color="background">
           <taskList/>
+          <router-link to="/contests/welcomecontest/submitstate">test submitstate page</router-link>
         </v-card>
       </v-tab-item>
       <!-- ランキング -->

@@ -8,6 +8,7 @@ import SignUp from './components/views/SignUp.vue'
 import SignIn from './components/views/SignIn.vue'
 import Problem from './components/views/Problem.vue';
 import Submit from './components/views/Submit.vue'
+import SubmitState from './components/views/SubmitState.vue'
 
 Vue.use(Router)
 
@@ -55,6 +56,12 @@ export default new Router({
       path: '/contests/welcomecontest/problem/submit',
       name: 'submit',
       component: Submit
+    },
+    // 提出状況の詳細をみれるページテスト用
+    {
+      path: '/contests/welcomecontest/submitstate',
+      name: 'submit-state',
+      component: SubmitState
     }
   ]
 })

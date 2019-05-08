@@ -23,7 +23,7 @@
         <td class="text-xs-left">{{ props.item.time }}</td>
         <td class="text-xs-left">
           <router-link
-            to="/contests/contest"
+            to="/contests/welcomecontest"
             class="linkcolor--text"
             style="text-decoration: none;"
           >参加する</router-link>

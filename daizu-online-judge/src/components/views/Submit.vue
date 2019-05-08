@@ -1,9 +1,12 @@
+<!-- 提出ページ -->
 <template>
-  <div id="task">
+  <div id="submit">
     <v-app>
       <Header/>
-      <v-content>
-        <v-container></v-container>
+      <v-content wrap>
+        <v-container>
+          <Main/>
+        </v-container>
       </v-content>
       <Footer/>
     </v-app>
@@ -14,12 +17,12 @@
 <script>
 import Header from "../modules/app-header";
 import Footer from "../modules/app-footer";
+import Main from "../modules/main-submit";
 export default {
-  name: "task",
   components: {
     Header,
+    Main,
     Footer
   }
 };
 </script>
-

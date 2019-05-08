@@ -1,8 +1,8 @@
 <template>
   <div id="app-contests-lists">
     <!-- 検索部 -->
-    <!--<v-card class="elevation-0">
-      <v-card-title>
+    <v-card class="elevation-0">
+    <!--  <v-card-title>
         <v-spacer/>
         <v-text-field 
           v-model="search"

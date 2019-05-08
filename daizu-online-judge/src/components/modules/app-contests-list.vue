@@ -3,7 +3,7 @@
     <!-- table部 -->
     <v-data-table
       :headers="headers"
-      :items="contestList"
+      :items="isCloseContests"
       :search="search"
       :filter="filter"
       :class="elevation-5"
@@ -49,14 +49,34 @@ export default {
         { text: "時間", sortable: false, value: "time" },
         { text: "", sortable: false, value: "entry" }
       ],
-      contestList: [],
+      cnt: 0,
+      contests: [],
+      isActiveContests: [],
+      isScheduleContests: [],
+      isCloseContests: [],
     };
   },
   mounted() {
     this.$axios.get('http://127.0.0.1:8000/api/1.0/contests/')
     .then(response => {
-      this.contestList = response.data.results;
+      alert(1);
+      this.cnt = response.data.count;
+      this.contests = response.data.results;
     });
+    for (var i = 0; i < this.cnt; i++) {
+      if (this.contests.results[i].isActive == 1) {
+        alert(2);
+        this.isActiveContests.push(this.contests.results[i]);
+      }
+      else if(this.contests.result[i].isSchedule == 1) {
+        alert(3);
+        this.isScheduleContests.push(this.contests.results[i]);
+      }
+      else {
+        alert(4);
+        this.isCloseContests.push(this.contests.results[i]);
+      }
+    }
   }
 };
 </script>

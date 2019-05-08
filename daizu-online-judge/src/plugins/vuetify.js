@@ -10,6 +10,7 @@ Vue.use(Vuetify, {
     accent: colors.red.darken1,
     textcolor: colors.grey.darken3,
     linkcolor: colors.blue.lighten2,
+    background: colors.grey.lighten5
   }
 
 })

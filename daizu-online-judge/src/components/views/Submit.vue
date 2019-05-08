@@ -1,5 +1,6 @@
+<!-- 提出ページ -->
 <template>
-  <div id="contests">
+  <div id="submit">
     <v-app>
       <Header/>
       <v-content wrap>
@@ -14,12 +15,10 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import Header from "../modules/app-header";
 import Footer from "../modules/app-footer";
-import Main from "../modules/main-contests";
+import Main from "../modules/main-submit";
 export default {
-  name: "contests",
   components: {
     Header,
     Main,

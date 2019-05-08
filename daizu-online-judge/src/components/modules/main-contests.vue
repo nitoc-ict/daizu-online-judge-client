@@ -15,19 +15,19 @@
       <!-- 開催中 -->
       <v-tab-item>
         <v-card flat>
-          <Lists />
+          <Lists :contests=activeContests />
         </v-card>
       </v-tab-item>
       <!-- 開催予定 -->
       <v-tab-item>
         <v-card flat>
-          <Lists/>
+          <Lists :contests=scheduleContests />
         </v-card>
       </v-tab-item>
       <!-- 終了後 -->
       <v-tab-item>
         <v-card flat>
-          <Lists/>
+          <Lists :contests=endContests />
         </v-card>
       </v-tab-item>
     </v-tabs>
@@ -46,7 +46,31 @@ export default {
     return {
       tab: null,
       items: ["開催中", "開催予定", "終了後"],
+      cnt: 0,
+      contests: [],
+      activeContests: [],
+      scheduleContests: [],
+      endContests: []
     }
+  },
+  mounted() {
+    this.$axios.get('http://127.0.0.1:8000/api/1.0/contests/')
+    .then(response => {
+      this.cnt = response.data.count;
+      this.contests = response.data.results;
+
+      for (var i = 0; i < this.cnt; i++) {
+        if (this.contests[i].isActive == true) {
+          this.activeContests.push(this.contests[i]);
+        }
+        else if (this.contests[i].isSchedule == true){
+          this.scheduleContests.push(this.contests[i])
+        }
+        else {
+          this.endContests.push(this.contests[i])
+        }
+      }
+    });
   }
 };
 </script>

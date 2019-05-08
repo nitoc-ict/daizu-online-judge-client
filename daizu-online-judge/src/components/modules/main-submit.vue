@@ -5,7 +5,12 @@
       <Selectbox title="問題"/>
       <Selectbox title="言語"/>
       <div class="body-2 textcolor--text">ソースコード</div>
-      <v-textarea box name="inputSource" height="14rem"></v-textarea>
+      <v-textarea
+        box
+        name="inputSource"
+        height="14rem"
+        style="font-family: Consolas, 'Courier New', Courier, Monaco, monospace;"
+      ></v-textarea>
     </v-layout>
     <SubmitButton buttonText="提出"/>
   </div>

@@ -1,13 +1,5 @@
 <template>
   <div id="main-contests">
-    <!-- 検索部 -->
-    <v-card class="elevation-0">
-      <v-card-title>
-        <v-spacer/>
-        <v-text-field v-model="search" append-icon="search" label="検索" single-line hide-details></v-text-field>
-      </v-card-title>
-    </v-card>
-
     <!-- タブ -->
     <v-tabs v-model="tab" color="white lighten-5">
       <v-tabs-slider color="accent"></v-tabs-slider>

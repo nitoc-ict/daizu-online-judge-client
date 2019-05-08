@@ -1,5 +1,18 @@
 <template>
-  <div id="app-lists">
+  <div id="app-contests-lists">
+    <!-- 検索部 -->
+    <!--<v-card class="elevation-0">
+      <v-card-title>
+        <v-spacer/>
+        <v-text-field 
+          v-model="search"
+          append-icon="search" 
+          label="検索" 
+          single-line 
+          hide-details
+        ></v-text-field>
+      </v-card-title>-->
+
     <!-- table部 -->
     <v-data-table
       :headers="headers"
@@ -29,16 +42,17 @@
       </template>
       <template v-slot:pageText="props">{{ props.pageStop }} / {{ props.itemsLength }}件表示</template>
     </v-data-table>
+    </v-card>
   </div>
 </template>
 
 <script>
 export default {
-  name: "app-lists",
+  name: 'app-contest-lists',
   props: ['contests'],
   data() {
     return {
-      search: "",
+      search: '',
       headers: [
         {
           text: "コンテスト名",

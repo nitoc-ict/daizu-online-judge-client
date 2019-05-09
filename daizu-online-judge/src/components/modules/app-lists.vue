@@ -10,7 +10,7 @@
     <!-- table部 -->
     <v-data-table
       :headers="headers"
-      :items="contestList"
+      :items="list"
       :search="search"
       :filter="filter"
       :class="elevation-5"
@@ -46,7 +46,7 @@ export default {
     return {
       search: "",
       headers: [
-        {
+        /* {
           text: "コンテスト名",
           align: "left",
           sortable: false,
@@ -54,10 +54,10 @@ export default {
         },
         { text: "開催日", sortable: false, value: "data" },
         { text: "時間", sortable: false, value: "time" },
-        { text: "", sortable: false, value: "entry" }
+        { text: "", sortable: false, value: "entry" } */
       ],
-      contestList: [
-        {
+      list: [
+        /* {
           name: "ICT Welcome Contest 2019",
           date: "2019/10/10",
           time: "13:00-14:00"
@@ -71,7 +71,7 @@ export default {
           name: "hoge contest",
           date: "2020/12/10",
           time: "16:00-18:00"
-        }
+        } */
       ]
     };
   }

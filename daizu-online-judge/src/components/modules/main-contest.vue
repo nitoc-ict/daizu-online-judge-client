@@ -9,9 +9,9 @@
       <!-- トップ -->
       <v-tab-item>
         <v-card flat color="background">
-          <div class="display-1 primary--text mt-5 mb-2">This is "{{ contestTitle }}"</div>
-          <div class="subheading grey--text text--darken-1 mb-5">{{ contestDate }}</div>
-          <div class="body-1 textcolor--text">{{ contestExplain }}</div>
+          <div class="display-1 primary--text mt-5 mb-2">This is "{{ contest[0].title }}"</div>
+          <div class="subheading grey--text text--darken-1 mb-5">{{ contest[0].startDate }}</div>
+          <div class="body-1 textcolor--text">{{ contest[0].topPage }}</div>
         </v-card>
       </v-tab-item>
       <!-- 問題 -->
@@ -56,13 +56,21 @@ export default {
   data() {
     return {
       tab: null,
-      items: ["トップ", "問題", "提出", "提出状況", "ランキング"]
+      items: ["トップ", "問題", "提出", "提出状況", "ランキング"],
+      contest: [],
+      contestTag: ''
     };
   },
-  props: {
+  /*props: {
     contestTitle: String,
     contestDate: String,
     contestExplain: String
+  },*/
+  mounted() {
+    this.$axios.get('http://127.0.0.1:8000/api/1.0/contests/:this.$route.params.tag')
+    .then(response => {
+      this.contest = response.data.results;
+    });
   }
 };
 </script>

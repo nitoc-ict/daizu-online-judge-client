@@ -4,14 +4,7 @@
       <Header/>
       <v-content>
         <v-container>
-          <Main
-            contestTitle="ICT Welcome Contest 2019"
-            contestDate="2019/05/09 16:30-18:00"
-            contestExplain="このコンテストは, 1 年生向けの初心者コンテストです.
-            問題を解く際は, C 言語で解くことを推奨します.
-            問題数は 6 問です. 配点は各問 100 点で, 満点は 600 点です.
-            出題範囲はM教材のfor文程度までとします."
-          />
+          <Main/>
         </v-container>
       </v-content>
       <Footer/>
@@ -31,6 +24,6 @@ export default {
     Header,
     Main,
     Footer
-  }
+  },
 };
 </script>

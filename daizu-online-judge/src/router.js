@@ -41,7 +41,7 @@ export default new Router({
       component: SignUp
     },
     {
-      path: '/contests/welcomecontest',
+      path: '/contests/:contestTag',
       name: 'contest',
       component: Contest
     },

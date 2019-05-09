@@ -17,7 +17,7 @@
       <!-- 問題 -->
       <v-tab-item>
         <v-card flat color="background">
-          <taskList/>
+          <taskList :header=problemTab  />
           <router-link to="/contests/welcomecontest/problem">test problem page</router-link>
         </v-card>
       </v-tab-item>
@@ -58,7 +58,14 @@ export default {
       tab: null,
       items: ["トップ", "問題", "提出", "提出状況", "ランキング"],
       contest: [],
-      contestTag: ''
+      contestTag: '',
+      //problems: [],
+      problemTab: [
+        {text: "問題名", align: "left", sortable: false, value: "name" },  
+        {text: "時間制限", sortable: false, value: "timeLimit" }, 
+        {text: "メモリ制限", sortable: false, value: "memoryLimit" }, 
+        {text: "配点", sortable: false, value: "score" }, 
+        {text: "", sortable: false, value: "submittion" }],
     };
   },
   /*props: {
@@ -68,6 +75,10 @@ export default {
   },*/
   mounted() {
     this.$axios.get('http://127.0.0.1:8000/api/1.0/contests/:this.$route.params.tag')
+    .then(response => {
+      this.contest = response.data.results;
+    });
+    this.$axios.get('http://127.0.0.1:8000/api/1.0/contests/:this.$route.params.tag/problem')
     .then(response => {
       this.contest = response.data.results;
     });

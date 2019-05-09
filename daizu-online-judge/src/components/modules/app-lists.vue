@@ -18,15 +18,16 @@
       rows-per-page-text
     >
       <template v-slot:items="props">
-        <td>{{ props.item.name }}</td>
-        <td class="text-xs-left">{{ props.item.date }}</td>
-        <td class="text-xs-left">{{ props.item.time }}</td>
+        <td>{{ props.item.problemName }}</td>
+        <td class="text-xs-left">{{ props.item.timeLimit }}</td>
+        <td class="text-xs-left">{{ props.item.memoryLimit }}</td>
+        <td class="text-xs-left">{{ props.item.score }}</td>
         <td class="text-xs-left">
           <router-link
             to="/contests/welcomecontest"
             class="linkcolor--text"
             style="text-decoration: none;"
-          >参加する</router-link>
+          >提出する</router-link>
         </td>
         <v-spacer/>
       </template>
@@ -42,6 +43,7 @@
 <script>
 export default {
   name: "app-lists",
+  props: [ 'list' ],
   data() {
     return {
       search: "",
@@ -56,8 +58,8 @@ export default {
         { text: "時間", sortable: false, value: "time" },
         { text: "", sortable: false, value: "entry" } */
       ],
-      list: [
-        /* {
+      /* list: [
+        {
           name: "ICT Welcome Contest 2019",
           date: "2019/10/10",
           time: "13:00-14:00"
@@ -71,8 +73,8 @@ export default {
           name: "hoge contest",
           date: "2020/12/10",
           time: "16:00-18:00"
-        } */
-      ]
+        }
+      ] */
     };
   }
 };

@@ -43,7 +43,9 @@
           </v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <DecisionButton buttonText="OK"/>
+            <router-link to="/" style="text-decoration: none;">
+              <DecisionButton buttonText="OK"/>
+            </router-link>
           </v-card-actions>
         </v-card>
       </v-flex>

@@ -2,7 +2,7 @@
 <template>
   <div id="app-selectbox">
     <div class="body-2 textcolor--text">{{ title }}</div>
-    <v-select :items="items" single-line flat height="1.5rem" style="padding: 0"></v-select>
+    <v-select v-model="items" :item="items" single-line flat height="1.5rem" style="padding: 0;"></v-select>
   </div>
 </template>
 
@@ -11,10 +11,11 @@ export default {
   name: "selectbox",
   props: {
     title: String
+    // items: Array
   },
   data() {
     return {
-      items: ["A", "B", "C", "D", "E"]
+      items: Array
     };
   }
 };

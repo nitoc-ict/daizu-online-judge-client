@@ -2,10 +2,12 @@
 <template>
   <div id="main-submit">
     <v-layout justify-start column fill-height>
-      <Selectbox title="問題"/>
-      <Selectbox title="言語"/>
+      <div class="body-2 textcolor--text">{{ title }}</div>
+      <v-select v-model="probrem" :items="probrems" label="問題名"></v-select>
+      <v-select v-model="langage" :items="langages" label="言語"></v-select>
       <div class="body-2 textcolor--text">ソースコード</div>
       <v-textarea
+        v-model="source"
         box
         name="inputSource"
         height="14rem"
@@ -28,18 +30,24 @@
   </div>
 </template>
 <script>
-import Selectbox from "./app-selectbox";
+// import Selectbox from "./app-selectbox";
 // import SubmitButton from "./app-button";
 // import Dialog from "./app-dialog";
 export default {
+  el: "#main-submit",
   components: {
-    Selectbox
+    // Selectbox
     // SubmitButton
     // Dialog
   },
   data() {
     return {
-      dialog: false
+      probrem: "",
+      langage: "",
+      source: "",
+      dialog: false,
+      probrems: ["hoge"],
+      langages: ["c", "c++", "java", "python3"]
     };
   }
 };
